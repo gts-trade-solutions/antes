@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* NRS Industrial Cooling Website Design System - All colors MUST be HSL */
+
+@layer base {
+  :root {
+    /* NRS Brand Colors */
+    --nrs-navy: 214 85% 15%;
+    --nrs-blue: 217 91% 60%;
+    --nrs-light-blue: 200 95% 85%;
+    --nrs-gray: 220 13% 91%;
+    --nrs-dark-gray: 215 16% 47%;
+    --nrs-text-dark: 218 54% 20%;
+    
+    /* Base Colors */
+    --background: 0 0% 100%;
+    --foreground: 218 54% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 218 54% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 218 54% 20%;
+
+    --primary: 214 85% 15%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 13% 96%;
+    --secondary-foreground: 218 54% 20%;
+
+    --muted: 220 13% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.375rem;
+    
+    /* NRS Specific Design Tokens */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--nrs-navy) / 0.9), hsl(var(--nrs-blue) / 0.8));
+    --gradient-card: linear-gradient(180deg, hsl(var(--background)), hsl(var(--nrs-gray) / 0.3));
+    --shadow-card: 0 4px 20px -4px hsl(var(--nrs-navy) / 0.1);
+    --shadow-nav: 0 2px 10px -2px hsl(var(--nrs-navy) / 0.15);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Keep light theme for this industrial site */
+    --background: 0 0% 100%;
+    --foreground: 218 54% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 218 54% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 218 54% 20%;
+    --primary: 214 85% 15%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 13% 96%;
+    --secondary-foreground: 218 54% 20%;
+    --muted: 220 13% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  
+  /* NRS Custom Utilities */
+  .hero-overlay {
+    background: var(--gradient-hero);
+  }
+  
+  .card-gradient {
+    background: var(--gradient-card);
+  }
+  
+  .text-shadow {
+    text-shadow: 0 2px 4px hsl(var(--nrs-navy) / 0.3);
+  }
+  
+  .hover-lift {
+    transition: var(--transition-smooth);
+    @apply hover:shadow-lg hover:-translate-y-1;
+  }
+  
+  .nav-shadow {
+    box-shadow: var(--shadow-nav);
+  }
+  
+  .card-shadow {
+    box-shadow: var(--shadow-card);
+  }
+}
