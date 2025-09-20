@@ -9,6 +9,7 @@ import SolutionsProducts from "./pages/SolutionsProducts";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import ChatWidget from "./components/ChatWidget";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
+    <ChatWidget />
   </QueryClientProvider>
 );
 

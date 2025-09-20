@@ -174,7 +174,7 @@ const Contact = () => {
                       <div>
                         <h3 className="font-semibold text-nrs-navy">Address</h3>
                         <p className="text-nrs-dark-gray leading-relaxed">
-                          NRS Process Systems Sdn Bhd<br />
+                          Antes Process Systems Sdn Bhd<br />
                           Industrial Cooling Specialists<br />
                           Kuala Lumpur, Malaysia
                         </p>

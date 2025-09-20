@@ -26,42 +26,93 @@ const Company = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-nrs-blue to-nrs-navy text-white py-24">
+      <section className="relative  py-24">
         <div className="absolute inset-0 bg-[url('/patterns/dots.svg')] opacity-10"></div>
-        <div className="container mx-auto px-6 text-center relative z-10">
-          <h1 className="text-5xl lg:text-6xl font-extrabold mb-6">
-            About <span className="text-nrs-blue-light">Us</span>
-          </h1>
-          <p className="text-lg max-w-2xl mx-auto opacity-90">
-            Delivering trust, innovation, and sustainability in cold storage solutions worldwide.
-          </p>
+
+        <div className="container mx-auto px-6 relative z-10">
+          <h2 className="text-4xl font-extrabold text-center mb-10">
+            <span className="text-nrs-blue-light">About Us</span>
+          </h2>
+
+          {/* Portrait Video Carousel */}
+          <div className="flex overflow-x-auto space-x-6 snap-x snap-mandatory justify-center px-2 md:px-4 lg:px-8">
+            {/* Video 1 */}
+            <div className="flex-shrink-0 w-52 sm:w-60 md:w-64 lg:w-72 snap-center">
+              <div className="aspect-[9/16] rounded-2xl shadow-lg overflow-hidden">
+                <video
+                  controls
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-full object-cover"
+                >
+                  <source src="/1.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+
+            {/* Video 2 (center autoplay) */}
+            <div className="flex-shrink-0 w-52 sm:w-60 md:w-64 lg:w-72 snap-center">
+              <div className="aspect-[9/16] rounded-2xl shadow-lg overflow-hidden ring-4 ring-nrs-blue-light">
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-full object-cover"
+                >
+                  <source src="/2.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+
+            {/* Video 3 */}
+            <div className="flex-shrink-0 w-52 sm:w-60 md:w-64 lg:w-72 snap-center">
+              <div className="aspect-[9/16] rounded-2xl shadow-lg overflow-hidden">
+                <video
+                  controls
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-full object-cover"
+                >
+                  <source src="/3.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Vision & Mission */}
-      {/* Vision & Mission */}
-<section className="py-20 bg-gradient-to-b from-white to-nrs-blue/5">
-  <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-stretch">
-    {/* Vision */}
-    <div className="p-10 rounded-3xl bg-gray-100 text-nrs-navy shadow-md hover:shadow-lg transition transform hover:scale-[1.02]">
-      <h2 className="text-3xl font-bold mb-4">Our Vision</h2>
-      <p className="text-lg leading-relaxed text-nrs-dark-gray">
-        To be the most successful, trusted, and respected system integrator 
-        and solutions provider for our customers.
-      </p>
-    </div>
 
-    {/* Mission */}
-    <div className="p-10 rounded-3xl bg-gray-100 text-nrs-navy shadow-md hover:shadow-lg transition transform hover:scale-[1.02]">
-      <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
-      <p className="text-lg leading-relaxed text-nrs-dark-gray">
-        Harnessing superior thinking, teamwork, and attention to detail in 
-        delivering engineered products that enhance safety, reliability, and 
-        performance while reducing our carbon footprint.
-      </p>
-    </div>
-  </div>
-</section>
+
+      {/* Vision & Mission */}
+      {/* Vision & Mission */}
+      <section className="py-20 bg-gradient-to-b from-white to-nrs-blue/5">
+        <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-stretch">
+          {/* Vision */}
+          <div className="p-10 rounded-3xl bg-gray-100 text-nrs-navy shadow-md hover:shadow-lg transition transform hover:scale-[1.02]">
+            <h2 className="text-3xl font-bold mb-4">Our Vision</h2>
+            <p className="text-lg leading-relaxed text-nrs-dark-gray">
+              To be the most successful, trusted, and respected system integrator
+              and solutions provider for our customers.
+            </p>
+          </div>
+
+          {/* Mission */}
+          <div className="p-10 rounded-3xl bg-gray-100 text-nrs-navy shadow-md hover:shadow-lg transition transform hover:scale-[1.02]">
+            <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
+            <p className="text-lg leading-relaxed text-nrs-dark-gray">
+              Harnessing superior thinking, teamwork, and attention to detail in
+              delivering engineered products that enhance safety, reliability, and
+              performance while reducing our carbon footprint.
+            </p>
+          </div>
+        </div>
+      </section>
 
 
       {/* Milestones */}
@@ -71,7 +122,7 @@ const Company = () => {
             Milestones in <span className="text-nrs-blue-light">Cold Chain Innovation</span>
           </h2>
           <p className="max-w-3xl mx-auto text-lg opacity-90 mb-12">
-            Each count represents our success in delivering tailored refrigeration solutions 
+            Each count represents our success in delivering tailored refrigeration solutions
             across multiple sectors globally.
           </p>
 
@@ -119,7 +170,7 @@ const Company = () => {
             Quality <span className="text-nrs-blue">Standards</span>
           </h2>
           <p className="max-w-3xl mx-auto text-lg text-nrs-dark-gray mb-16">
-            We adhere to international benchmarks and continuously innovate to meet 
+            We adhere to international benchmarks and continuously innovate to meet
             global standards of excellence in every solution we provide.
           </p>
 

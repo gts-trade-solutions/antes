@@ -13,7 +13,7 @@ const Footer = () => {
                   {/* Use imported logo */}
                   <img
                     src={logo}   // ✅ now uses imported logo
-                    alt="NRS Logo"
+                    alt="Antes Logo"
                     className="h-10 w-auto object-contain"
                   />
                 </div>

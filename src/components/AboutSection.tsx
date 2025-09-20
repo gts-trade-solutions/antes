@@ -49,7 +49,7 @@ const AboutSection = () => {
             Industry We Serve
           </h2>
           <p className="text-white/90 leading-relaxed text-lg">
-            As cold storage suppliers in India, NRS specializes in innovative cold storage building
+            As cold storage suppliers in India, Antes specializes in innovative cold storage building
             solutions for diverse industries to meet the need for efficient and safe storage of perishable goods. 
             We cater to fast food chains, retail, super & hypermarkets, restaurants, pharmacies, hospitality, 
             logistics, food processing, and many more — ensuring quality, reliability, and customer satisfaction.

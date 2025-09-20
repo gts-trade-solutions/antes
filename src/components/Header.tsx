@@ -1,7 +1,8 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Search, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Link, useNavigate } from "react-router-dom"; // ⬅️ React Router
 
 // ✅ Do not change your logo import
 import logo from "@/assets/logo (1).png";
@@ -15,9 +16,26 @@ const NAV_ITEMS: NavItem[] = [
   { name: "Projects", href: "/projects" },
 ];
 
+// 🔤 Simple language list (expand as needed)
+const LANGS = [
+  { code: "en", label: "English" },
+  { code: "hi", label: "हिन्दी" },
+  { code: "ar", label: "العربية" },
+];
+
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [lang, setLang] = useState<string>(() => localStorage.getItem("lang") || "en");
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    localStorage.setItem("lang", lang);
+    // If you have i18n, call i18n.changeLanguage(lang) here.
+    // Or navigate to locale-prefixed routes if you use them:
+    // navigate(`/${lang}${window.location.pathname}${window.location.search}`, { replace: true });
+  }, [lang]);
 
   const activePath = useMemo(
     () => (typeof window !== "undefined" ? window.location.pathname : "/"),
@@ -26,17 +44,21 @@ const Header: React.FC = () => {
 
   const isActive = (href: string) => activePath === href;
 
+  const handleContact = () => navigate("/contact");
+
   return (
     <header className="bg-white sticky top-0 z-50 nav-shadow shadow-sm">
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between gap-3">
           {/* Left: Logo + Tagline + Product Links */}
           <div className="flex items-center gap-4 min-w-0">
-            <img
-              src={logo} // ✅ unchanged
-              alt="NRS Logo"
-              className="h-10 w-auto object-contain shrink-0"
-            />
+            <Link to="/" aria-label="Go to home">
+              <img
+                src={logo} // ✅ unchanged
+                alt="NRS Logo"
+                className="h-10 w-auto object-contain shrink-0"
+              />
+            </Link>
 
             {/* Tagline + product family (desktop) */}
             <div className="hidden md:flex items-center gap-3 truncate">
@@ -45,19 +67,19 @@ const Header: React.FC = () => {
               </span>
 
               <div className="flex items-center gap-2 text-sm font-semibold">
-                <a
-                  href="/varicold"
+                <Link
+                  to="/varicold"
                   className="text-sky-500 hover:underline focus:outline-none focus:ring-2 focus:ring-sky-500/30 rounded"
                 >
                   variCOLD®
-                </a>
+                </Link>
                 <span className="text-gray-400">•</span>
-                <a
-                  href="/gonatural"
+                <Link
+                  to="/gonatural"
                   className="text-sky-500 hover:underline focus:outline-none focus:ring-2 focus:ring-sky-500/30 rounded"
                 >
                   goNATURAL®
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -67,9 +89,9 @@ const Header: React.FC = () => {
             {NAV_ITEMS.map((item) => {
               const active = isActive(item.href);
               return (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
+                  to={item.href}
                   aria-current={active ? "page" : undefined}
                   className={[
                     "font-medium transition-colors",
@@ -79,13 +101,30 @@ const Header: React.FC = () => {
                   ].join(" ")}
                 >
                   {item.name}
-                </a>
+                </Link>
               );
             })}
           </nav>
 
-          {/* Right: Search + CTA (desktop) */}
+          {/* Right: Language + Search + CTA (desktop) */}
           <div className="hidden lg:flex items-center gap-4">
+            {/* Language Selector */}
+            <div className="relative">
+              <select
+                aria-label="Select language"
+                value={lang}
+                onChange={(e) => setLang(e.target.value)}
+                className="border border-gray-300 rounded-md px-3 py-2 text-sm text-nrs-text-dark bg-white hover:border-accent focus:outline-none focus:ring-2 focus:ring-accent/30"
+              >
+                {LANGS.map((l) => (
+                  <option key={l.code} value={l.code}>
+                    {l.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* Search */}
             <div className="relative">
               {isSearchOpen ? (
                 <div className="flex items-center gap-2">
@@ -119,7 +158,7 @@ const Header: React.FC = () => {
 
             <Button
               className="bg-nrs-blue hover:bg-nrs-navy text-white px-6 rounded-lg"
-              onClick={() => (window.location.href = "/contact")}
+              onClick={handleContact}
             >
               Contact Us
             </Button>
@@ -146,13 +185,13 @@ const Header: React.FC = () => {
                 COOL IDEAS • COOL SOLUTIONS
               </span>
               <div className="flex items-center gap-2 text-sm font-semibold">
-                <a href="/varicold" className="text-sky-500 hover:underline">
+                <Link to="/varicold" className="text-sky-500 hover:underline">
                   variCOLD®
-                </a>
+                </Link>
                 <span className="text-gray-400">•</span>
-                <a href="/gonatural" className="text-sky-500 hover:underline">
+                <Link to="/gonatural" className="text-sky-500 hover:underline">
                   goNATURAL®
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -160,23 +199,40 @@ const Header: React.FC = () => {
               {NAV_ITEMS.map((item) => {
                 const active = isActive(item.href);
                 return (
-                  <a
+                  <Link
                     key={item.name}
-                    href={item.href}
+                    to={item.href}
                     className={[
                       "font-medium py-2 rounded-md px-1 transition-colors",
                       active
                         ? "text-accent"
                         : "text-nrs-text-dark hover:text-accent",
                     ].join(" ")}
+                    onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 );
               })}
             </nav>
 
+            {/* Mobile language + search + CTA */}
             <div className="mt-4 space-y-3">
+              {/* Language */}
+              <select
+                aria-label="Select language"
+                value={lang}
+                onChange={(e) => setLang(e.target.value)}
+                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm text-nrs-text-dark bg-white hover:border-accent focus:outline-none focus:ring-2 focus:ring-accent/30"
+              >
+                {LANGS.map((l) => (
+                  <option key={l.code} value={l.code}>
+                    {l.label}
+                  </option>
+                ))}
+              </select>
+
+              {/* Search */}
               <div className="flex items-center gap-2">
                 <Input type="search" placeholder="Search…" className="flex-1" />
                 <Button
@@ -188,9 +244,10 @@ const Header: React.FC = () => {
                   <Search className="w-5 h-5" />
                 </Button>
               </div>
+
               <Button
                 className="w-full bg-nrs-blue hover:bg-nrs-navy text-white rounded-lg"
-                onClick={() => (window.location.href = "/contact")}
+                onClick={handleContact}
               >
                 Contact Us
               </Button>
