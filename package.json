@@ -1,0 +1,38 @@
+{
+  "name": "antes",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.2.4",
+    "@radix-ui/react-tooltip": "^1.2.8",
+    "@tanstack/react-query": "^5.90.19",
+    "class-variance-authority": "^0.7.1",
+    "lucide-react": "^0.562.0",
+    "next": "16.1.4",
+    "next-themes": "^0.4.6",
+    "react": "19.2.3",
+    "react-chatbotify": "^2.5.0",
+    "react-dom": "19.2.3",
+    "sonner": "^2.0.7",
+    "sooner": "^1.1.4",
+    "swiper": "^12.0.3",
+    "tailwind-merge": "^3.4.0",
+    "toastify": "^2.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.18",
+    "@types/node": "25.0.9",
+    "@types/react": "19.2.9",
+    "autoprefixer": "^10.4.23",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.4",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18"
+  }
+}
