@@ -112,7 +112,7 @@ export default function Header() {
 
         {/* Content */}
         <div className="relative">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 p-2">
             <div className="flex h-14 items-center justify-between gap-3">
               {/* Logo */}
               <button

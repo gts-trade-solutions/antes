@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
 import { Textarea } from "../components/ui/textarea";
-import { Phone, Mail, MapPin, Building2, Globe } from "lucide-react";
+import { Phone, Mail, MapPin, Building2, Globe, Flag } from "lucide-react";
 
 export default function Contact() {
   const offices = [
@@ -34,10 +34,8 @@ export default function Contact() {
       email: "sales.in@antesglobal.com",
       phones: ["+968 9173 7705"],
     },
-   
   ];
 
-  // ✅ Force WHITE background everywhere (even in dark mode)
   const pageBg = "bg-white text-slate-900";
   const heroBg = "bg-white";
   const sectionBg = "bg-white";
@@ -51,22 +49,47 @@ export default function Contact() {
     "w-full rounded-2xl border border-black/10 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm outline-none " +
     "focus:ring-2 focus:ring-slate-900/10";
 
-  const OfficeCard = ({ o }) => (
-    <div className="rounded-3xl border border-black/10 bg-white p-6 sm:p-7 shadow-sm hover:shadow-md transition">
-      <div className="flex items-start gap-3">
-        <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-slate-900 text-white">
-          <Building2 className="h-5 w-5" />
+  const OfficeCard = ({ o, big }) => (
+    <div
+      className={[
+        "rounded-3xl border border-black/10 bg-white shadow-sm hover:shadow-md transition",
+        big ? "p-7 sm:p-8 w-full" : "p-6 sm:p-7",
+        big ? "ring-1 ring-slate-900/5" : "",
+      ].join(" ")}
+    >
+      <div className="flex items-start gap-4">
+        <div
+          className={[
+            "flex items-center justify-center bg-slate-900 text-white",
+            big ? "h-12 w-12 rounded-2xl" : "h-11 w-11 rounded-2xl",
+          ].join(" ")}
+        >
+          {big ? <Building2 className="h-6 w-6" /> : <Flag className="h-5 w-5" />}
         </div>
 
-        <div className="min-w-0">
+        <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-center gap-2">
-            <div className="text-base font-semibold text-slate-900">{o.country}</div>
-            <span className="inline-flex items-center rounded-full border border-black/10 bg-white px-3 py-1 text-xs font-semibold text-slate-700">
+            <div className={[big ? "text-xl" : "text-base", "font-semibold text-slate-900"].join(" ")}>
+              {o.country}
+            </div>
+
+            <span
+              className={[
+                "inline-flex items-center rounded-full border border-black/10 bg-white text-xs font-semibold text-slate-700",
+                big ? "px-3.5 py-1.5" : "px-3 py-1",
+              ].join(" ")}
+            >
               {o.badge}
             </span>
+
+            {big ? (
+              <span className="inline-flex items-center rounded-full bg-slate-900/5 px-3 py-1 text-xs font-semibold text-slate-700">
+                Primary location
+              </span>
+            ) : null}
           </div>
 
-          <div className="mt-4 space-y-3 text-sm text-slate-700">
+          <div className={[big ? "mt-5" : "mt-4", "space-y-3 text-sm text-slate-700"].join(" ")}>
             <div className="flex items-start gap-3">
               <MapPin className="mt-0.5 h-4 w-4 text-slate-400" />
               <div className="leading-relaxed">
@@ -94,16 +117,32 @@ export default function Contact() {
               </div>
             </div>
           </div>
+
+          {big ? (
+            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className="rounded-2xl border border-black/10 bg-white px-4 py-3 text-sm">
+                <div className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Sales Email</div>
+                <div className="mt-1 font-semibold text-slate-900 break-words">{o.email}</div>
+              </div>
+              <div className="rounded-2xl border border-black/10 bg-white px-4 py-3 text-sm">
+                <div className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Support</div>
+                <div className="mt-1 font-semibold text-slate-900 break-words">ajay@antesglobal.com</div>
+              </div>
+            </div>
+          ) : null}
         </div>
       </div>
     </div>
   );
 
+  const headOffice = offices.find((o) => o.country === "India");
+  const branches = offices.filter((o) => o.country !== "India");
+
   return (
     <div className={`min-h-screen ${pageBg}`}>
       <Header />
 
-      {/* HERO (no background colors / no gradients) */}
+      {/* HERO */}
       <section className={`py-14 sm:py-16 ${heroBg}`}>
         <div className="w-full px-4 sm:px-8 lg:px-12">
           <div className="mx-auto max-w-5xl text-center">
@@ -116,8 +155,7 @@ export default function Contact() {
             </h1>
 
             <p className="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg text-justify">
-              Reach our team in India, Qatar, Oman, and Kuwait. We’ll help you with design, execution, and long-term
-              support.
+              Reach our team in India, Qatar, and Oman. We’ll help you with design, execution, and long-term support.
             </p>
           </div>
         </div>
@@ -227,11 +265,25 @@ export default function Contact() {
             <div className="mt-10">
               <div className="rounded-3xl border border-black/10 bg-white p-6 sm:p-7">
                 <h3 className="text-lg font-semibold text-slate-900">Offices & Contacts</h3>
-                <p className="mt-2 text-sm text-slate-600 text-justify">All office addresses are listed below.</p>
+                <p className="mt-2 text-sm text-slate-600 text-justify">
+                  Head Office is highlighted below. Branch offices are listed after it.
+                </p>
               </div>
 
+              {/* ✅ FULL-WIDTH INDIA HEAD OFFICE */}
+              <div className="mt-6">
+                <OfficeCard o={headOffice} big />
+              </div>
+
+              {/* ✅ BRANCHES TITLE */}
+              <div className="mt-8 flex items-center justify-between gap-4">
+                <h4 className="text-base sm:text-lg font-semibold text-slate-900">Branches</h4>
+                <div className="h-px w-full bg-black/10" />
+              </div>
+
+              {/* ✅ BRANCHES GRID */}
               <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
-                {offices.map((o) => (
+                {branches.map((o) => (
                   <OfficeCard key={o.country} o={o} />
                 ))}
               </div>
