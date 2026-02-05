@@ -547,23 +547,7 @@ export default function SolutionsProducts() {
         </div>
       </Section>
 
-      {/* ✅ FAQ (added below all contents) */}
-      <section className="py-14 sm:py-16 bg-white">
-        <Fluid>
-          <div className="mx-auto max-w-6xl">
-            <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight text-slate-900">
-              Frequently Asked Questions(FAQ)
-            </h2>
-
-            <div className="mt-10">
-              {faqs.map((x, idx) => (
-                <FAQRow key={idx} idx={idx} q={x.q} a={x.a} />
-              ))}
-            </div>
-          </div>
-        </Fluid>
-      </section>
-
+    
       <Footer />
     </div>
   );

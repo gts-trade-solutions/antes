@@ -97,8 +97,12 @@ export default function AboutSection() {
             autoplay={{ delay: 2200, disableOnInteraction: false }}
             spaceBetween={18}
             breakpoints={{
-              320: { slidesPerView: 1.15, spaceBetween: 12 },
-              480: { slidesPerView: 1.7, spaceBetween: 12 },
+              // ✅ Mobile: show 1 card nicely centered (no shape distortion)
+              320: { slidesPerView: 1.05, spaceBetween: 12 },
+              380: { slidesPerView: 1.15, spaceBetween: 12 },
+              480: { slidesPerView: 1.45, spaceBetween: 12 },
+
+              // ✅ Desktop/tablet: keep EXACT as before
               640: { slidesPerView: 2.4, spaceBetween: 14 },
               768: { slidesPerView: 3.2, spaceBetween: 14 },
               1024: { slidesPerView: 4.2, spaceBetween: 16 },
@@ -112,7 +116,11 @@ export default function AboutSection() {
               const active = index === activeIndex;
 
               return (
-                <SwiperSlide key={index} className="!h-auto flex">
+                <SwiperSlide
+                  key={index}
+                  // ✅ MOBILE ONLY: center the card so it looks perfect
+                  className="!h-auto flex justify-center sm:justify-start"
+                >
                   <HexCard active={active}>
                     <div className="flex items-center justify-center">
                       <HexBadge active={active}>
@@ -174,7 +182,9 @@ export default function AboutSection() {
 
 /* ============================= */
 /* ✅ Rounded Hex Card (SVG) */
-/* ✅ Fix: unique gradient IDs to avoid SVG ID collisions in prod */
+/* ✅ Desktop: unchanged
+ * ✅ Mobile: prevent too-wide flattening by limiting card width ONLY on mobile
+ */
 /* ============================= */
 function HexCard({ children, active }) {
   const uid = useId();
@@ -182,7 +192,8 @@ function HexCard({ children, active }) {
   const hexSheenId = `hexSheen-${uid}`;
 
   return (
-    <div className="group w-full">
+    // ✅ MOBILE ONLY: cap width so hex keeps same look as desktop
+    <div className="group w-full max-w-[360px] mx-auto sm:max-w-none sm:mx-0">
       <div
         className={[
           "transition-all duration-500",
@@ -252,7 +263,6 @@ function HexCard({ children, active }) {
 
 /* ============================= */
 /* ✅ Rounded Hex Badge (SVG) */
-/* ✅ Fix: unique gradient ID to avoid collisions */
 /* ============================= */
 function HexBadge({ children, active }) {
   const uid = useId();

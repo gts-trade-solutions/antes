@@ -29,8 +29,8 @@ export default function BlastFreezersHeroSection() {
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_15%_35%,rgba(48,176,224,0.20),transparent_55%)]" />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/0 via-black/0 to-black/25" />
 
-          {/* bear on right */}
-          <div className="pointer-events-none absolute right-0 bottom-0">
+          {/* bear on right (HIDE ONLY ON MOBILE, DESKTOP UNCHANGED) */}
+          <div className="pointer-events-none absolute right-0 bottom-0 hidden sm:block">
             <img
               src={HERO_RIGHT_IMAGE}
               alt={HERO_RIGHT_ALT}
@@ -106,11 +106,12 @@ export default function BlastFreezersHeroSection() {
                     </h2>
 
                     <p className="mt-4 text-[15px] leading-7 text-slate-700">
-                      Antes Global, a leading cold storage manufacturer in India, offers a
-                      comprehensive range of doors and docking solutions designed to meet the
-                      specific needs of cold rooms and warehouses. Our solutions are engineered
-                      to provide optimal efficiency, durability, and energy efficiency, ensuring
-                      seamless operations in various temperature-controlled environments.
+                      Antes Global, a leading cold storage manufacturer in India,
+                      offers a comprehensive range of doors and docking solutions
+                      designed to meet the specific needs of cold rooms and warehouses.
+                      Our solutions are engineered to provide optimal efficiency,
+                      durability, and energy efficiency, ensuring seamless operations
+                      in various temperature-controlled environments.
                     </p>
                   </div>
                 </div>
