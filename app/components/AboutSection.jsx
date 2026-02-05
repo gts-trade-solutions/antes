@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useId, useState } from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -28,7 +28,7 @@ const industries = [
   { title: "Super markets", icon: ShoppingCart },
   { title: "Restaurants", icon: Building2 },
   { title: "Pharmacy", icon: Hospital },
-  { title: "Research ", icon: BookOpen },
+  { title: "Research", icon: BookOpen },
   { title: "Hospitality", icon: BedDouble },
   { title: "Agriculture", icon: Trees },
   { title: "Special projects", icon: Ruler },
@@ -39,9 +39,7 @@ const industries = [
   { title: "Food manufacture", icon: Wine },
 ];
 
-/**
- * ✅ Rounded Hexagon (clean + smooth)
- */
+/** Rounded Hex Path */
 const ROUNDED_HEX_PATH =
   "M 24 14 " +
   "Q 28 6 38 6 " +
@@ -61,8 +59,8 @@ export default function AboutSection() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    // ✅ Force LIGHT look even when site is dark mode
-    <section className="relative overflow-hidden bg-white py-10 sm:py-20 text-slate-900">
+    // ✅ force SAME colors in light/dark
+    <section className="industries-section relative overflow-hidden bg-white py-10 sm:py-20 text-slate-900">
       {/* Background */}
       <div className="absolute inset-0 bg-white" />
       <div className="absolute inset-0 opacity-[0.06] [background-image:radial-gradient(circle_at_1px_1px,rgba(15,23,42,0.25)_1px,transparent_0)] [background-size:18px_18px]" />
@@ -80,9 +78,8 @@ export default function AboutSection() {
           </h2>
 
           <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-slate-600 sm:text-lg">
-            As cold storage suppliers in India, Antes specializes in innovative
-            cold storage building solutions for diverse industries to meet the
-            need for efficient and safe storage of perishable goods.
+            As cold storage suppliers in India, Antes specializes in innovative cold storage building solutions for
+            diverse industries to meet the need for efficient and safe storage of perishable goods.
           </p>
         </div>
 
@@ -126,10 +123,11 @@ export default function AboutSection() {
                       {industry.title}
                     </h3>
 
+                    {/* ✅ mobile: 2 lines */}
                     <p
                       className={[
                         "hex-sub mt-2 text-center text-xs transition-all duration-300",
-                        active ? "text-slate-600" : "text-slate-400/80",
+                        active ? "text-slate-600" : "text-slate-500",
                       ].join(" ")}
                     >
                       Cold storage &amp; refrigeration solutions
@@ -149,10 +147,11 @@ export default function AboutSection() {
         </div>
       </div>
 
+      {/* Scoped styles */}
       <style jsx global>{`
-        /* ✅ if the site has dark mode styles, FORCE this section to stay light */
-        .industries-swiper,
-        .industries-swiper * {
+        /* keep this section light even if site is dark */
+        .industries-section,
+        .industries-section * {
           color-scheme: light;
         }
 
@@ -167,7 +166,7 @@ export default function AboutSection() {
           font-weight: 600 !important;
           letter-spacing: -0.01em !important;
           margin: 0 !important;
-          color: #0f172a !important; /* slate-900 */
+          color: #0f172a !important;
         }
         @media (min-width: 640px) {
           .hex-title {
@@ -175,12 +174,7 @@ export default function AboutSection() {
           }
         }
 
-        /* keep subtitle readable in dark theme too */
-        .hex-sub {
-          color: rgba(71, 85, 105, 0.92) !important; /* slate-600-ish */
-        }
-
-        /* ✅ MOBILE ONLY */
+        /* ✅ MOBILE ONLY: centered + correct hex + reduce height a bit */
         @media (max-width: 639px) {
           .industries-swiper {
             padding-left: 10px;
@@ -196,12 +190,14 @@ export default function AboutSection() {
             width: 100% !important;
           }
 
+          /* reduce height slightly (your request) */
           .hex-card-h {
-            height: 195px !important;
+            height: 188px !important;
           }
 
+          /* force subtitle 2 lines */
           .hex-sub {
-            max-width: 170px;
+            max-width: 175px;
             margin-left: auto;
             margin-right: auto;
             white-space: normal !important;
@@ -220,21 +216,17 @@ export default function AboutSection() {
 }
 
 /* ============================= */
-/* Hex Card */
+/* ✅ Hex Card (NO <defs> ids → NO production clone collision) */
+/* Mobile: preserveAspectRatio meet */
+/* Desktop: preserveAspectRatio none */
 /* ============================= */
 function HexCard({ children, active }) {
-  const uid = useId();
-  const hexFillId = `hexFill-${uid}`;
-  const hexSheenId = `hexSheen-${uid}`;
-
   return (
     <div className="group w-full hex-card-wrap">
       <div
         className={[
           "transition-all duration-500",
-          active
-            ? "scale-[1.02] opacity-100"
-            : "scale-[0.98] opacity-[0.86] group-hover:opacity-100",
+          active ? "scale-[1.02]" : "scale-[0.985] group-hover:scale-[1.0]",
         ].join(" ")}
       >
         <div
@@ -245,33 +237,22 @@ function HexCard({ children, active }) {
               : "drop-shadow-[0_14px_36px_rgba(2,6,23,0.12)]",
           ].join(" ")}
         >
-          {/* Mobile SVG */}
+          {/* MOBILE SVG */}
           <svg
             viewBox="0 0 100 100"
             className="absolute inset-0 h-full w-full sm:hidden"
             preserveAspectRatio="xMidYMid meet"
             aria-hidden="true"
           >
-            <defs>
-              {/* ✅ Fixed LIGHT gradients (stay same in dark mode) */}
-              <linearGradient id={hexFillId} x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stopColor="#FFFFFF" />
-                <stop offset="55%" stopColor="#F8FAFC" />
-                <stop offset="100%" stopColor="#EEF2FF" />
-              </linearGradient>
-
-              <linearGradient id={hexSheenId} x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="rgba(48,176,224,0.14)" />
-                <stop offset="55%" stopColor="rgba(255,255,255,0)" />
-              </linearGradient>
-            </defs>
-
-            <path d={ROUNDED_HEX_PATH} fill={`url(#${hexFillId})`} />
-            <path d={ROUNDED_HEX_PATH} fill={`url(#${hexSheenId})`} />
+            {/* base fill */}
+            <path d={ROUNDED_HEX_PATH} fill="#F8FAFC" />
+            {/* soft sheen (no gradient id) */}
+            <path d={ROUNDED_HEX_PATH} fill="rgba(48,176,224,0.10)" />
+            {/* border */}
             <path
               d={ROUNDED_HEX_PATH}
               fill="none"
-              stroke={active ? "rgba(0,40,88,0.85)" : "rgba(0,40,88,0.65)"}
+              stroke={active ? "rgba(0,40,88,0.85)" : "rgba(0,40,88,0.55)"}
               strokeWidth="3.4"
               strokeLinejoin="round"
               strokeLinecap="round"
@@ -279,32 +260,19 @@ function HexCard({ children, active }) {
             />
           </svg>
 
-          {/* Desktop SVG */}
+          {/* DESKTOP SVG */}
           <svg
             viewBox="0 0 100 100"
             className="absolute inset-0 h-full w-full hidden sm:block"
             preserveAspectRatio="none"
             aria-hidden="true"
           >
-            <defs>
-              <linearGradient id={hexFillId} x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stopColor="#FFFFFF" />
-                <stop offset="55%" stopColor="#F8FAFC" />
-                <stop offset="100%" stopColor="#EEF2FF" />
-              </linearGradient>
-
-              <linearGradient id={hexSheenId} x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="rgba(48,176,224,0.14)" />
-                <stop offset="55%" stopColor="rgba(255,255,255,0)" />
-              </linearGradient>
-            </defs>
-
-            <path d={ROUNDED_HEX_PATH} fill={`url(#${hexFillId})`} />
-            <path d={ROUNDED_HEX_PATH} fill={`url(#${hexSheenId})`} />
+            <path d={ROUNDED_HEX_PATH} fill="#F8FAFC" />
+            <path d={ROUNDED_HEX_PATH} fill="rgba(48,176,224,0.10)" />
             <path
               d={ROUNDED_HEX_PATH}
               fill="none"
-              stroke={active ? "rgba(0,40,88,0.85)" : "rgba(0,40,88,0.65)"}
+              stroke={active ? "rgba(0,40,88,0.85)" : "rgba(0,40,88,0.55)"}
               strokeWidth="3.4"
               strokeLinejoin="round"
               strokeLinecap="round"
@@ -312,17 +280,14 @@ function HexCard({ children, active }) {
             />
           </svg>
 
-          {/* ✅ Force light content panel (so dark theme doesn’t dim it) */}
           <div
             className={[
               "relative flex w-full flex-col items-center justify-center px-7 py-6",
-              "h-[180px] sm:h-[180px] max-[639px]:h-[195px]",
+              "h-[180px] sm:h-[180px]",
               "transition-all duration-300",
-              "bg-white/35",
+              active ? "bg-white/35" : "bg-white/25 group-hover:bg-white/30",
             ].join(" ")}
-            style={{
-              color: "#0f172a", // force text dark
-            }}
+            style={{ color: "#0f172a" }}
           >
             {children}
           </div>
@@ -333,57 +298,23 @@ function HexCard({ children, active }) {
 }
 
 /* ============================= */
-/* Hex Badge */
+/* ✅ Hex Badge (NO <defs> ids) */
 /* ============================= */
 function HexBadge({ children, active }) {
-  const uid = useId();
-  const badgeFillId = `badgeFill-${uid}`;
-
   return (
     <div className="relative h-12 w-12 shrink-0">
       <svg
         viewBox="0 0 100 100"
-        className="absolute inset-0 h-full w-full sm:hidden"
+        className="absolute inset-0 h-full w-full"
         preserveAspectRatio="xMidYMid meet"
         aria-hidden="true"
       >
-        <defs>
-          <linearGradient id={badgeFillId} x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#002858" />
-            <stop offset="100%" stopColor="#0B1220" />
-          </linearGradient>
-        </defs>
-
-        <path d={ROUNDED_HEX_PATH} fill={`url(#${badgeFillId})`} />
+        {/* solid dark fill (same as your correct image) */}
+        <path d={ROUNDED_HEX_PATH} fill="#0B1220" />
         <path
           d={ROUNDED_HEX_PATH}
           fill="none"
-          stroke={active ? "rgba(48,176,224,0.65)" : "rgba(255,255,255,0.18)"}
-          strokeWidth="2.2"
-          strokeLinejoin="round"
-          strokeLinecap="round"
-          vectorEffect="non-scaling-stroke"
-        />
-      </svg>
-
-      <svg
-        viewBox="0 0 100 100"
-        className="absolute inset-0 h-full w-full hidden sm:block"
-        preserveAspectRatio="none"
-        aria-hidden="true"
-      >
-        <defs>
-          <linearGradient id={badgeFillId} x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#002858" />
-            <stop offset="100%" stopColor="#0B1220" />
-          </linearGradient>
-        </defs>
-
-        <path d={ROUNDED_HEX_PATH} fill={`url(#${badgeFillId})`} />
-        <path
-          d={ROUNDED_HEX_PATH}
-          fill="none"
-          stroke={active ? "rgba(48,176,224,0.65)" : "rgba(255,255,255,0.18)"}
+          stroke={active ? "rgba(48,176,224,0.65)" : "rgba(255,255,255,0.22)"}
           strokeWidth="2.2"
           strokeLinejoin="round"
           strokeLinecap="round"

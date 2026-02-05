@@ -374,31 +374,217 @@ export default function Company() {
       </section>
 
       {/* MILESTONES */}
-      <section className="relative overflow-hidden bg-white py-16 sm:py-20">
-        <div className="pointer-events-none absolute inset-0 opacity-[0.06] [background-image:radial-gradient(circle_at_1px_1px,rgba(15,23,42,0.25)_1px,transparent_0)] [background-size:18px_18px]" />
 
-        <div className={FLUID + " text-center"}>
-          <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-            Milestones in Cold Chain Delivery
-          </h2>
+<section className="bg-white py-10 sm:py-12">
+  <div className={FLUID}>
+    {/* Heading */}
+    <div className="text-center">
+      <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+        Our <span className="text-[#2B6EF3]">Journey</span>
+      </h2>
+      <p className="mt-1.5 text-xl font-extrabold tracking-tight text-slate-900 sm:text-2xl">
+        From Vision to Industry Impact
+      </p>
+    </div>
 
-          <p className="mx-auto mt-4 max-w-3xl text-base text-slate-600 sm:text-lg">
-            Our footprint and execution model support fast, reliable delivery across multiple industries and regions.
-          </p>
+    {(() => {
+      const items = [
+        {
+          year: "2015",
+          yearBlue: true,
+          title: "The Beginning",
+          desc:
+            "Antes was\nfounded with a clear\nvision-to provide reliable,\nenergy-efficient, and\ncustomized cold\nstorage solutions\ntailored to industry\nneeds",
+        },
+        {
+          year: "2017",
+          title: "First Turnkey\nProject\nDelivered",
+          desc:
+            "Antes forays into large-\nscale turnkey solutions\nand successfully\ncompletes its first\nturnkey project.",
+        },
+        {
+          year: "2022",
+          title: "FIFA World Cup\n(Qatar)",
+          desc:
+            "Project of 147 Cold\nRooms Completed at a\ntime record of 57 Days",
+        },
+        {
+          year: "2023",
+          title: "Indias First\nAS/RS\nCold Storage",
+          desc:
+            "Antes, is committed to\ntransforming the cold\nchain industry by\nintroducing breakthrough\ntechnologies and\nend-to-end solutions\nthat redefine performance\nand reliability.",
+        },
+        {
+          year: "2024",
+          title: "Advancing\nLeadership\nin AS/RS\nSolutions",
+          desc:
+            "Antes strengthens its\nleadership position\nby successfully\ncompleting its second\nand third AS/RS cold\nstorage projects.",
+        },
+        {
+          year: "2025",
+          title: "10+ Years\nof\nExcellence",
+          desc:
+            "Today,\nAG Cooling Solutions PVT\nLTD\nstands as a trusted cold\nchain solutions partner,\ndelivering sustainable,\ntechnology-driven\nrefrigeration systems with\nprecision, performance,\nand long-term value.",
+          highlight: true,
+        },
+      ];
 
-          <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {milestones.map((m) => (
+      const Timeline = () => (
+        <>
+          {/* top line + markers */}
+          <div className="relative h-[105px]">
+            {/* main line */}
+            <div className="absolute left-0 right-0 top-[58px] h-[4px] rounded-full bg-[#9DB6D3]" />
+
+            {/* end dots */}
+            <div className="absolute left-0 top-[56px] h-[9px] w-[9px] -translate-x-1 rounded-full bg-[#9DB6D3]" />
+            <div className="absolute right-0 top-[56px] h-[9px] w-[9px] translate-x-1 rounded-full bg-[#9DB6D3]" />
+
+            {/* points */}
+            <div className="absolute inset-x-0 top-0 grid grid-cols-6">
+              {items.map((m) => (
+                <div key={m.year} className="relative flex justify-center">
+                  {/* year */}
+                  <div
+                    className={[
+                      "absolute top-0 text-[22px] font-extrabold",
+                      m.yearBlue ? "text-[#2B6EF3]" : "text-slate-900",
+                    ].join(" ")}
+                  >
+                    {m.year}
+                  </div>
+
+                  {/* circle */}
+                  <div className="absolute top-[38px] flex h-[36px] w-[36px] items-center justify-center rounded-full bg-[#2F5FA8] shadow-[0_8px_14px_rgba(2,6,23,0.10)]">
+                    <div className="h-[15px] w-[15px] rounded-full bg-[#BFD4F2]" />
+                  </div>
+
+                  {/* stem + bottom dot */}
+                  <div className="absolute top-[78px] h-[30px] w-[3px] rounded-full bg-[#9DB6D3]" />
+                  <div className="absolute top-[106px] h-[9px] w-[9px] rounded-full bg-[#9DB6D3]" />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* cards */}
+          <div className="mt-2 grid grid-cols-6 gap-5">
+            {items.map((m) => (
               <div
-                key={m.label}
-                className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                key={m.title}
+                className="overflow-hidden bg-[#EAF2FB] rounded-t-[28px] rounded-b-[56px]"
               >
-                <div className="text-3xl font-semibold text-slate-900">{m.number}</div>
-                <div className="mt-2 text-sm text-slate-600">{m.label}</div>
+                {/* blue header strip for last card */}
+                {m.highlight ? (
+                  <div className="bg-[#9DB6D3] px-4 py-4">
+                    <h3 className="whitespace-pre-line text-center text-[24px] font-extrabold leading-snug text-slate-900">
+                      {m.title}
+                    </h3>
+                  </div>
+                ) : (
+                  <div className="px-4 pt-6">
+                    <h3 className="whitespace-pre-line text-center text-[18px] font-extrabold leading-snug text-slate-900">
+                      {m.title}
+                    </h3>
+                  </div>
+                )}
+
+                <div className={m.highlight ? "px-4 pt-4 pb-8" : "px-4 pt-3 pb-8"}>
+                  <p className="whitespace-pre-line text-center text-[12px] leading-relaxed text-slate-800">
+                    {m.desc}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
-        </div>
-      </section>
+
+          <p className="mt-8 text-center text-xs font-semibold tracking-wide text-slate-700">
+            Engineering Cold Storage Solutions for the Past Decade and Beyond
+          </p>
+        </>
+      );
+
+      return (
+        <>
+          {/* Desktop: smaller width so it fits */}
+          <div className="mt-10 hidden lg:block">
+            <div className="mx-auto w-[1320px]">
+              <Timeline />
+            </div>
+          </div>
+
+          {/* Mobile/Tablet */}
+          <div className="mt-8 lg:hidden">
+            <div className="mx-auto max-w-3xl space-y-4">
+              {items.map((m, idx) => (
+                <div
+                  key={m.year}
+                  className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm"
+                >
+                  <div className="absolute left-0 top-0 h-full w-12 bg-slate-50" />
+
+                  <div className="absolute left-6 top-7 -translate-x-1/2">
+                    <div className="h-2.5 w-2.5 rounded-full bg-[#9DB6D3]" />
+                    {idx !== items.length - 1 && (
+                      <div className="mx-auto mt-2 h-[calc(100%-12px)] w-[2px] bg-[#9DB6D3]/70" />
+                    )}
+                  </div>
+
+                  <div className="flex gap-3 p-5 pl-16">
+                    <div className="min-w-[58px]">
+                      <div
+                        className={[
+                          "text-xl font-extrabold",
+                          m.yearBlue ? "text-[#2B6EF3]" : "text-slate-900",
+                        ].join(" ")}
+                      >
+                        {m.year}
+                      </div>
+                    </div>
+
+                    <div className="flex-1">
+                      <div className="overflow-hidden rounded-2xl bg-[#EAF2FB]">
+                        {m.highlight ? (
+                          <div className="bg-[#9DB6D3] px-4 py-3">
+                            <h3 className="whitespace-pre-line text-base font-extrabold leading-snug text-slate-900">
+                              {m.title}
+                            </h3>
+                          </div>
+                        ) : (
+                          <div className="px-4 pt-3">
+                            <h3 className="whitespace-pre-line text-base font-extrabold leading-snug text-slate-900">
+                              {m.title}
+                            </h3>
+                          </div>
+                        )}
+
+                        <div className="px-4 pb-4 pt-2">
+                          <p className="whitespace-pre-line text-sm leading-relaxed text-slate-700">
+                            {m.desc}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+
+              <p className="pt-1 text-center text-xs font-semibold tracking-wide text-slate-700">
+                Engineering Cold Storage Solutions for the Past Decade and Beyond
+              </p>
+            </div>
+          </div>
+        </>
+      );
+    })()}
+  </div>
+</section>
+
+
+
+
+
+
 
       {/* WHY CHOOSE */}
       <section className="relative py-8 sm:py-20 bg-white">
