@@ -39,7 +39,7 @@ const BUDGET_IMAGE = "/bottle-chillers.jpg";
 const BUDGET = {
   title: "Budget-Friendly Commercial Freezers",
   para1:
-    "At Antes Global, we understand that quality cold storage services should not be a preserve of large enterprises. That is why we provide affordable commercial refrigeration installation while still providing top-notch quality and functionality. Our team of professionals will consult with you and determine your precise needs in order to provide you with the best proposals.",
+    "At Antes, we understand that quality cold storage services should not be a preserve of large enterprises. That is why we provide affordable commercial refrigeration installation while still providing top-notch quality and functionality. Our team of professionals will consult with you and determine your precise needs in order to provide you with the best proposals.",
   para2:
     "Our solutions are designed to create a seamless and efficient shopping experience, from backend storage to front-end display. We offer both 1-to-1 display systems and multiple display systems connected to centralized refrigeration systems, ensuring optimal performance and energy efficiency.",
 };

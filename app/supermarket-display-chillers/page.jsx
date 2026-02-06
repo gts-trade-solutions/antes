@@ -106,7 +106,7 @@ export default function BlastFreezersHeroSection() {
                     </h2>
 
                     <p className="mt-4 text-[15px] leading-7 text-slate-700">
-                      Antes Global for Supermarket Display Chiller Suppliers in India,
+                      Antes for Supermarket Display Chiller Suppliers in India,
                       specializes in supplying cutting-edge supermarket display chillers
                       and freezers designed to enhance the shopping experience and preserve
                       the freshness of products. Our high-quality equipment is tailored to

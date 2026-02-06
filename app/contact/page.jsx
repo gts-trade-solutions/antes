@@ -29,8 +29,8 @@ export default function Contact() {
     },
     {
       country: "Oman",
-      badge: "Opening shortly",
-      address: ["Opening shortly"],
+      badge: "AL Arab Global Cooling Solution",
+      address: ["Block No.293, was Number 9307, Building No. 1/1012, West Misfat Bawshar, Muscut, Oman"],
       email: "sales.in@antesglobal.com",
       phones: ["+968 9173 7705"],
     },

@@ -58,7 +58,7 @@ export default function WhyChooseAntesBlastFreezers() {
         {/* heading */}
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-            Why choose Antes Global for your{" "}
+            Why choose Antes for your{" "}
             <span className="text-[#002858]">Blast Freezer</span> requirements?
           </h2>
           <p className="mt-3 text-sm text-slate-600 sm:text-base">

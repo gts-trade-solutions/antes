@@ -122,7 +122,7 @@ export default function BlastFreezersHeroSection() {
 
                 <div className="mt-5 space-y-5 text-[15px] leading-7 text-slate-700">
                   <p>
-                    Antes Global is a leading provider of high-quality portable
+                    Antes is a leading provider of high-quality portable
                     and customized Blast Freezers in India. Our blast freezers
                     are designed and manufactured to meet the stringent
                     requirements of various industries, including dairy,

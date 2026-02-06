@@ -38,7 +38,7 @@ export default function Projects() {
             >
               India’s first ASRS cold storage
             </a>{" "}
-            facility. Designed and executed by Antes Global as a Cold Chain System Integrator, the project integrates
+            facility. Designed and executed by Antes as a Cold Chain System Integrator, the project integrates
             high-density pallet ASRS, complete automation, and energy-efficient refrigeration to ensure maximum storage
             optimization, operational efficiency, and reliable temperature control.
           </>
@@ -94,7 +94,7 @@ export default function Projects() {
           { icon: Ruler, label: "Structure Height", value: "12 meters" },
         ],
         description:
-          "Antes Global delivered a fully integrated cold chain solution including refrigeration systems, insulated panels, MHE, and cold storage doors—ensuring efficient and reliable frozen storage operations.",
+          "Antes delivered a fully integrated cold chain solution including refrigeration systems, insulated panels, MHE, and cold storage doors—ensuring efficient and reliable frozen storage operations.",
       },
       {
         id: "05",

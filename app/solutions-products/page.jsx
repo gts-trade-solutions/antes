@@ -271,7 +271,7 @@ export default function SolutionsProducts() {
             </h1>
 
             <p className="mt-4 text-justify leading-relaxed text-slate-600 sm:text-lg">
-              Antes Global is a leading cold storage system integrator and solutions provider in Kerala, India,
+              Antes is a leading cold storage system integrator and solutions provider in Kerala, India,
               specializing in commercial refrigeration and freezer installations. With 20+ years of HVAC and cold chain
               experience, we deliver reliable, energy-efficient, turnkey solutions for temperature-controlled facilities
               across India.
@@ -296,7 +296,7 @@ export default function SolutionsProducts() {
         <div className="grid gap-10 lg:grid-cols-12 lg:items-start">
           <div className="lg:col-span-5">
             <div className="rounded-3xl border border-black/10 bg-white p-7">
-              <h3 className="text-lg font-semibold text-slate-900">Why choose ASRS Cold Storage by Antes Global?</h3>
+              <h3 className="text-lg font-semibold text-slate-900">Why choose ASRS Cold Storage by Antes?</h3>
               <p className="mt-3 text-sm leading-relaxed text-slate-600">
                 Our ASRS cold storage systems reduce manual handling, improve inventory control, maximize storage
                 capacity and lower operational cost—while maintaining consistent temperatures to protect product quality.
@@ -434,7 +434,7 @@ export default function SolutionsProducts() {
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-900 text-white">
                   <Snowflake className="h-5 w-5" />
                 </div>
-                <h3 className="text-base font-semibold text-slate-900">Why choose Antes Global?</h3>
+                <h3 className="text-base font-semibold text-slate-900">Why choose Antes?</h3>
               </div>
               <p className="mt-3 text-sm leading-relaxed text-slate-600">
                 Customized solutions, portable options, high-quality construction, energy efficiency, and expert

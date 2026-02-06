@@ -12,7 +12,7 @@ const testimonials = [
     name: "Mr. Rony Tom",
     role: "Director, Jacme",
     quote:
-      "Our firm Pristine Agro is engaged in manufacturing of Processed & Frozen FNV, Indian-Kerala Style Parotta’s & other ready to eat products. Antes Global Cold Storage Manufacturers in India has provided us the Freezing & Storage Solution for said project, which involves 2.5 TON Blast Freezer & 200 TON Capacity Storage Freezer. We Happy & Satisfied with the Performance of the equipment’s and the services rendered by Antes Global.",
+      "Our firm Pristine Agro is engaged in manufacturing of Processed & Frozen FNV, Indian-Kerala Style Parotta’s & other ready to eat products. Antes Cold Storage Manufacturers in India has provided us the Freezing & Storage Solution for said project, which involves 2.5 TON Blast Freezer & 200 TON Capacity Storage Freezer. We Happy & Satisfied with the Performance of the equipment’s and the services rendered by Antes.",
     meta: "2.5 TON Blast Freezer • 200 TON Storage Freezer",
   },
   {
@@ -49,7 +49,7 @@ export default function TestimonialsSection() {
           </p>
 
           <h3 className="mt-5 text-2xl font-semibold tracking-tight text-[#002858] sm:text-3xl lg:text-4xl">
-            What clients say about Antes Global
+            What clients say about Antes
           </h3>
 
           <p className="mt-3 text-sm leading-relaxed text-slate-600 sm:text-[15px]">

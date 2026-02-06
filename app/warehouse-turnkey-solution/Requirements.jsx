@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 
 /**
- * ✅ Walk-in Cold Rooms - "Why Antes Global" section
+ * ✅ Walk-in Cold Rooms - "Why Antes" section
  * + Adds 2 image-content blocks (as per screenshots):
  *   1) Turnkey Solutions for Cold Warehousing with Racking & MHE
  *   2) Temperature-Controlled Environments
@@ -21,10 +21,10 @@ import {
  */
 
 const SECTION_TITLE =
-  "Why Choose Antes Global for Turnkey Cold Storage Solutions?";
+  "Why Choose Antes for Turnkey Cold Storage Solutions?";
 
 const SECTION_DESC =
-  "Antes Global’s mission is to offer clients personalized, affordable, and reliable cold storage services. A team of professional engineers at our disposal ensures that they take their time to understand the needs of the client and proceed to provide the necessary solutions. We integrate higher technology and top quality material in our walk in chillers and freezers to make them more durable and efficient. Here, we always aim to meet and even surpass the expectations of our clients while delivering the best services all through.";
+  "Antes’s mission is to offer clients personalized, affordable, and reliable cold storage services. A team of professional engineers at our disposal ensures that they take their time to understand the needs of the client and proceed to provide the necessary solutions. We integrate higher technology and top quality material in our walk in chillers and freezers to make them more durable and efficient. Here, we always aim to meet and even surpass the expectations of our clients while delivering the best services all through.";
 
 const FEATURES_TITLE = "Key Features of Our Walk-in Cold Rooms:";
 
@@ -68,7 +68,7 @@ const TEMP_IMAGE = "/turnkey2.png";
 const TURNKEY = {
   title: "Turnkey Solutions for Cold Warehousing with Racking & MHE",
   desc:
-    "At Antes Global, we understand the critical role of racking and material handling equipment (MHE) in maximizing the storage capacity and efficiency of cold storage facilities. Our turnkey solutions include the design, supply, and installation of:",
+    "At Antes, we understand the critical role of racking and material handling equipment (MHE) in maximizing the storage capacity and efficiency of cold storage facilities. Our turnkey solutions include the design, supply, and installation of:",
   bullets: [
     {
       title: "Palletized Racking Systems",

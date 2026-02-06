@@ -40,7 +40,7 @@ export default function Company() {
   const whyChoose = [
     {
       title: "Industry-Focused Expertise",
-      desc: "Antes Global is a recognized cold storage solutions provider in India, serving industries such as food processing, dairy, seafood, poultry, pharmaceuticals, and cold logistics. Each solution is engineered to align with industry-specific requirements.",
+      desc: "Antes is a recognized cold storage solutions provider in India, serving industries such as food processing, dairy, seafood, poultry, pharmaceuticals, and cold logistics. Each solution is engineered to align with industry-specific requirements.",
     },
     {
       title: "Integrated Cold Storage Solutions",
@@ -56,7 +56,7 @@ export default function Company() {
     },
     {
       title: "Customized Solutions with End-to-End Support",
-      desc: "From consultation and system design to installation and ongoing service, Antes Global provides complete project support—ensuring reliable performance throughout the system lifecycle.",
+      desc: "From consultation and system design to installation and ongoing service, Antes provides complete project support—ensuring reliable performance throughout the system lifecycle.",
     },
   ];
 
@@ -108,7 +108,7 @@ export default function Company() {
         <div className={FLUID}>
           <div className="text-center">
             <div className="inline-flex items-center rounded-full border border-black/10 bg-white/70 px-2 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-slate-700 backdrop-blur">
-              About Antes Global
+              About Antes
             </div>
 
             <h1 className="mt-3 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
@@ -116,7 +116,7 @@ export default function Company() {
             </h1>
 
             <p className="mt-3 text-justify leading-relaxed text-slate-600 sm:text-lg">
-              Antes Global is a fast-growing commercial refrigeration and cold chain solution provider, specializing in
+              Antes is a fast-growing commercial refrigeration and cold chain solution provider, specializing in
               delivering integrated, end-to-end cold chain solutions tailored to the specific operational requirements
               of our clients. We support a diverse range of industries including food processing, cold storage and
               packaging, retail and quick-service restaurants, dairy, seafood exports, large multipurpose cold
@@ -124,7 +124,7 @@ export default function Company() {
             </p>
 
             <p className="mt-3 text-justify leading-relaxed text-slate-600 sm:text-lg">
-              With active operations across India, Oman, and Qatar, Antes Global delivers region-specific cold chain
+              With active operations across India, Oman, and Qatar, Antes delivers region-specific cold chain
               solutions, backed by a deep understanding of local climatic conditions, regulatory compliance, and
               industry-specific performance standards.
             </p>
@@ -222,7 +222,7 @@ export default function Company() {
             </div>
 
             <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-              About Antes Global
+              About Antes
             </h2>
 
             <div className="mx-auto mt-4 h-px max-w-2xl bg-black/10" />
@@ -230,7 +230,7 @@ export default function Company() {
 
           <div className="mt-4 rounded-3xl border border-black/10 bg-white p-7 shadow-sm sm:p-9">
             <p className="text-base leading-relaxed text-slate-600 sm:text-lg">
-              Antes Global is a fast-growing commercial refrigeration and cold chain solution provider, specializing in
+              Antes is a fast-growing commercial refrigeration and cold chain solution provider, specializing in
               delivering integrated, end-to-end cold chain solutions tailored to the specific operational requirements
               of our clients. We support a diverse range of industries including food processing, cold storage and
               packaging, retail and quick-service restaurants, dairy, seafood exports, large multipurpose cold
@@ -238,7 +238,7 @@ export default function Company() {
             </p>
 
             <p className="mt-5 text-base leading-relaxed text-slate-600 sm:text-lg">
-              With active operations across India, Oman, and Qatar, Antes Global delivers region-specific cold chain
+              With active operations across India, Oman, and Qatar, Antes delivers region-specific cold chain
               solutions, backed by a deep understanding of local climatic conditions, regulatory compliance, and
               industry-specific performance standards.
             </p>
@@ -591,7 +591,7 @@ export default function Company() {
         <div className={FLUID}>
           <div className="text-center">
             <div className="inline-flex items-center rounded-full border border-black/10 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-slate-700">
-              Why Choose Antes Global
+              Why Choose Antes
             </div>
             <h2 className="mt-6 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
               A trusted cold storage solutions provider in India

@@ -26,7 +26,7 @@ const FEATURES = [
 /** ✅ CONTENT FROM YOUR IMAGES */
 const CTA_TITLE = "Ice Cube Machine Manufacturers in Kerala, India.";
 const CTA_SUBTITLE =
-  "Ice cube makers are some of the most important apparatus that any company would need especially when dealing in foods and beverages. With our extensive product range, superior quality, and exceptional customer support, Antes Global is your trusted partner for Ice Cube Machine Manufacturers in Kerala, India. Contact us today to learn more about our Ice Cube Machine and how we can help you optimize your operations";
+  "Ice cube makers are some of the most important apparatus that any company would need especially when dealing in foods and beverages. With our extensive product range, superior quality, and exceptional customer support, Antes is your trusted partner for Ice Cube Machine Manufacturers in Kerala, India. Contact us today to learn more about our Ice Cube Machine and how we can help you optimize your operations";
 const CTA_BUTTON = "Contact Us Now";
 
 const FAQS = [

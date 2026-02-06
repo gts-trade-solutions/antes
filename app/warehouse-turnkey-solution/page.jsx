@@ -105,7 +105,7 @@ export default function TurnkeySolutionsPage() {
                     </div>
 
                     <p className="mt-5 text-[15px] leading-7 text-slate-700">
-                      Antes Global specializes in providing Turnkey Solutions in Kerala,
+                      Antes specializes in providing Turnkey Solutions in Kerala,
                       India for complete cold storage facilities. Our comprehensive
                       offerings encompass the design, supply, installation, and
                       maintenance of insulated panels, refrigeration systems, palletized

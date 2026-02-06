@@ -10,11 +10,11 @@ const FAQ_DATA = [
     section: "Company Overview",
     items: [
       {
-        q: "What is Antes Global?",
-        a: "Antes Global is a fast-growing commercial refrigeration and cold chain solutions company specializing in customized end-to-end cold storage systems. We serve industries such as food processing, dairy, seafood, retail & fast food, pharma, hospitality, cold chain logistics, and large multipurpose warehousing.",
+        q: "What is Antes?",
+        a: "Antes is a fast-growing commercial refrigeration and cold chain solutions company specializing in customized end-to-end cold storage systems. We serve industries such as food processing, dairy, seafood, retail & fast food, pharma, hospitality, cold chain logistics, and large multipurpose warehousing.",
       },
       {
-        q: "Where does Antes Global operate?",
+        q: "Where does Antes operate?",
         a: "We operate across India, Oman, and Qatar, delivering end-to-end cold chain solutions through our in-house team.",
       },
       {
@@ -31,11 +31,11 @@ const FAQ_DATA = [
     section: "Vision, Mission & Core Principles",
     items: [
       {
-        q: "What is Antes Global’s vision?",
+        q: "What is Antes’s vision?",
         a: "To become a trusted cold storage solutions partner in India, delivering advanced, efficient, and eco-friendly cold room systems that help businesses preserve quality, improve performance, and grow sustainably across food, dairy, seafood, pharma, and processing industries.",
       },
       {
-        q: "What is Antes Global’s mission?",
+        q: "What is Antes’s mission?",
         a: "To deliver custom-built, reliable, and energy-efficient cold storage solutions that support clients’ growth and product integrity—through smart design, quality installation, and long-term service support.",
       },
       {
@@ -73,7 +73,7 @@ const FAQ_DATA = [
         a: "ASRS (Automated Storage and Retrieval System) cold storage combines automation with controlled temperature environments to reduce manual handling, improve inventory control, maximize storage density, and maintain consistent product conditions.",
       },
       {
-        q: "Why choose ASRS cold storage by Antes Global?",
+        q: "Why choose ASRS cold storage by Antes?",
         a: "Our ASRS solutions are designed for precise temperature control, automated storage and retrieval (reducing frequent door openings), space optimization through vertical storage, and improved energy efficiency—helping lower operational costs while maintaining product quality.",
       },
       {
@@ -102,7 +102,7 @@ const FAQ_DATA = [
         a: "Yes. We supply and support material handling solutions including pallet trucks, forklifts, stackers, conveyor systems, reach trucks, and order pickers tailored for cold storage operations.",
       },
       {
-        q: "Why choose Antes Global for MHE solutions?",
+        q: "Why choose Antes for MHE solutions?",
         a: "Our equipment is designed to meet industry standards for durability and performance, with services including installation, maintenance, and technical assistance to ensure long-term operational efficiency.",
       },
       {
@@ -184,10 +184,10 @@ const FAQ_DATA = [
     ],
   },
   {
-    section: "Why Choose Antes Global",
+    section: "Why Choose Antes",
     items: [
       {
-        q: "Why is Antes Global considered a leading cold storage solutions provider in India?",
+        q: "Why is Antes considered a leading cold storage solutions provider in India?",
         a: "We combine industry-leading expertise, an integrated product portfolio (blast freezers, walk-in cold rooms, display chillers, doors, docking solutions), high-quality equipment, innovation, and tailored end-to-end support.",
       },
       {
@@ -204,7 +204,7 @@ const FAQ_DATA = [
     section: "Testimonials",
     items: [
       {
-        q: "What do your customers say about Antes Global?",
+        q: "What do your customers say about Antes?",
         a: "Customers highlight timely execution, strong performance of equipment, professional planning/design/installation, and prompt after-sales service support across blast freezers, turnkey cold stores, and racking warehouses.",
       },
     ],
@@ -213,15 +213,15 @@ const FAQ_DATA = [
     section: "Contact & Locations",
     items: [
       {
-        q: "How can I contact Antes Global (India)?",
+        q: "How can I contact Antes (India)?",
         a: "India: 74/460-C, RIGA BUILDING, Near Edakkal Bhagavathy Temple, Beach Road, Calicut 673 021. Email: sales.in@antesglobal.com. Contact: 0495-2526797 / 8714650444.",
       },
       {
-        q: "How can I contact Antes Global (Qatar)?",
+        q: "How can I contact Antes (Qatar)?",
         a: "Qatar: Antes International WLL, Office 03, 2F Block 55, Barwa Commercial Avenue, Doha, Qatar. Email: tisson@antesglobal.com. Contact: +974 3000 6550.",
       },
       {
-        q: "How can I contact Antes Global (Oman)?",
+        q: "How can I contact Antes (Oman)?",
         a: "Oman: Opening shortly. Email: sales.in@antesglobal.com. Contact: +968 9173 7705.",
       },
      
@@ -303,7 +303,7 @@ export default function FaqPage() {
             </h1>
 
             <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
-              Answers about Antes Global, cold storage solutions, ASRS, blast freezers,
+              Answers about Antes, cold storage solutions, ASRS, blast freezers,
               walk-in cold rooms, ice machines, doors & docking, and more.
             </p>
 

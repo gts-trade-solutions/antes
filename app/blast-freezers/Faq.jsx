@@ -131,13 +131,13 @@ export default function BlastFreezersContentWithFAQ() {
 
             <p className="mx-auto mt-5 max-w-4xl text-base leading-7 text-white/85 sm:text-lg">
               Whether you are in need of high end quality or reasonably priced blast
-              freezers in India, Antes Global can be of great help to you. Please get
+              freezers in India, Antes can be of great help to you. Please get
               in touch with us to let you know your specific needs and to find out
               more about our portfolio of blast freezer services.
             </p>
 
             <p className="mx-auto mt-8 max-w-4xl text-base leading-7 text-white/85 sm:text-lg">
-              As a prominent blast freezer manufacturer in India, Antes Global is proud
+              As a prominent blast freezer manufacturer in India, Antes is proud
               to serve customers in Kerala. Our blast freezers are ideal for businesses
               in Kerala&apos;s diverse industries, including seafood processing, dairy farming,
               and food manufacturing. You can contact us for Commercial refrigeration and

@@ -26,7 +26,7 @@ const FEATURES = [
 /** ✅ CONTENT FROM YOUR IMAGES */
 const CTA_TITLE = "Doors and Docking Solutions in Kerala";
 const CTA_SUBTITLE =
-  "Whether you are looking for Doors and Docking Solutions in Kerala or other regions of India, Antes Global is your trusted partner. Our commitment to quality, reliability, and customer satisfaction ensures that you receive the best possible solutions for your cold storage needs. Contact us today to learn more about our Doors and Dockers and how we can help you optimize your operations";
+  "Whether you are looking for Doors and Docking Solutions in Kerala or other regions of India, Antes is your trusted partner. Our commitment to quality, reliability, and customer satisfaction ensures that you receive the best possible solutions for your cold storage needs. Contact us today to learn more about our Doors and Dockers and how we can help you optimize your operations";
 const CTA_BUTTON = "Contact Us Now";
 
 const FAQS = [
@@ -44,7 +44,7 @@ const FAQS = [
   },
   {
     q: "How do Dock Levelers work?",
-    a: "Dock Levelers at Antes Global automatically adjust to the height of the truck, creating a stable platform for forklifts and workers. This makes loading and unloading much safer and faster.",
+    a: "Dock Levelers at Antes automatically adjust to the height of the truck, creating a stable platform for forklifts and workers. This makes loading and unloading much safer and faster.",
   },
 ];
 

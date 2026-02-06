@@ -26,7 +26,7 @@ const FEATURES = [
 /** ✅ CONTENT FROM YOUR IMAGES */
 const CTA_TITLE = "Turnkey Solutions in Kerala, India";
 const CTA_SUBTITLE =
-  "As a leading cold storage manufacturer in India, Antes Global is proud to offer our turnkey solutions to clients in Kerala. Our expertise and experience enable us to deliver high-quality cold storage facilities that meet the specific needs of the local market.Please call us for your cold storage needs and get a detailed insight on our turnkey solutions that we provide in India that ensures the best of storage and food preservation.";
+  "As a leading cold storage manufacturer in India, Antes is proud to offer our turnkey solutions to clients in Kerala. Our expertise and experience enable us to deliver high-quality cold storage facilities that meet the specific needs of the local market.Please call us for your cold storage needs and get a detailed insight on our turnkey solutions that we provide in India that ensures the best of storage and food preservation.";
 const CTA_BUTTON = "Contact Us Now";
 
 const FAQS = [
@@ -43,8 +43,8 @@ const FAQS = [
     a: "Absolutely! Every project is different, and we specialize in creating custom solutions tailored to your exact needs. From small storage facilities to large construction turnkey projects, we design everything with your product type, storage capacity, and temperature requirements in mind. ",
   },
   {
-    q: "What makes Antes Global different from other cold storage solution providers?",
-    a: "At Antes Global, we offer more than just cold storage facilities—we provide Turnkey Solutions in India that are fully customized to your business needs. From cutting-edge equipment to ongoing support, we're dedicated to delivering reliable, energy-efficient, and cost-effective solutions.",
+    q: "What makes Antes different from other cold storage solution providers?",
+    a: "At Antes, we offer more than just cold storage facilities—we provide Turnkey Solutions in India that are fully customized to your business needs. From cutting-edge equipment to ongoing support, we're dedicated to delivering reliable, energy-efficient, and cost-effective solutions.",
   },
 ];
 

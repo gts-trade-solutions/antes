@@ -102,7 +102,7 @@ export default function BlastFreezersHeroSection() {
                   </div>
 
                   <p className="mt-4 text-[15px] leading-7 text-slate-700">
-                    Antes Global, a leading walk-in cold room manufacturer in India,
+                    Antes, a leading walk-in cold room manufacturer in India,
                     offers customized walk-in chillers and freezers to cater to a wide
                     range of industries. Our cold room suppliers in India are designed
                     to meet the specific requirements of our customers, ensuring optimal
@@ -116,7 +116,7 @@ export default function BlastFreezersHeroSection() {
 
                   <p className="mt-4 text-[15px] leading-7 text-slate-700">
                     Whether you're in the hospitality, medical, food processing, or
-                    pharmaceutical sector, Antes Global has the expertise to design and
+                    pharmaceutical sector, Antes has the expertise to design and
                     build a walk-in cold room that perfectly suits your needs. Our team
                     of engineers works closely with clients to understand their unique
                     requirements and provide tailored solutions.

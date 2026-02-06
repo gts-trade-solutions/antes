@@ -106,7 +106,7 @@ export default function BlastFreezersHeroSection() {
                     </h2>
 
                     <p className="mt-4 text-[15px] leading-7 text-slate-700">
-                      Antes Global, a leading cold storage manufacturer in India,
+                      Antes, a leading cold storage manufacturer in India,
                       offers a comprehensive range of doors and docking solutions
                       designed to meet the specific needs of cold rooms and warehouses.
                       Our solutions are engineered to provide optimal efficiency,

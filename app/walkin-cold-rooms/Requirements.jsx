@@ -4,17 +4,17 @@ import React from "react";
 import { Thermometer, Boxes, SlidersHorizontal, Leaf, ShieldCheck } from "lucide-react";
 
 /**
- * ✅ Walk-in Cold Rooms - "Why Antes Global" section
+ * ✅ Walk-in Cold Rooms - "Why Antes" section
  * - Uses EXACT content from your screenshots
  * - Premium, clean card layout (not copied look)
  * - Responsive: 3 cards top, 2 cards bottom centered
  */
 
 const SECTION_TITLE =
-  "Why Antes Global as Walk-in Cold Room Manufacturers in Kerala, India?";
+  "Why Antes as Walk-in Cold Room Manufacturers in Kerala, India?";
 
 const SECTION_DESC =
-  "Antes Global’s mission is to offer clients personalized, affordable, and reliable cold storage services. A team of professional engineers at our disposal ensures that they take their time to understand the needs of the client and proceed to provide the necessary solutions. We integrate higher technology and top quality material in our walk in chillers and freezers to make them more durable and efficient. Here, we always aim to meet and even surpass the expectations of our clients while delivering the best services all through.";
+  "Antes’s mission is to offer clients personalized, affordable, and reliable cold storage services. A team of professional engineers at our disposal ensures that they take their time to understand the needs of the client and proceed to provide the necessary solutions. We integrate higher technology and top quality material in our walk in chillers and freezers to make them more durable and efficient. Here, we always aim to meet and even surpass the expectations of our clients while delivering the best services all through.";
 
 const FEATURES_TITLE = "Key Features of Our Walk-in Cold Rooms:";
 

@@ -142,7 +142,7 @@ export default function Contact() {
                       <div className="min-w-0">
                         <h3 className="font-semibold text-nrs-navy">Kuwait</h3>
                         <p className="text-nrs-dark-gray leading-relaxed mt-2">
-                          Antes Global Industrial Equipment, Machineries &amp; Spare parts Company W.L.L,
+                          Antes Industrial Equipment, Machineries &amp; Spare parts Company W.L.L,
                           <br />
                           P.O Box 566, Unit No:B7-33,
                           <br />

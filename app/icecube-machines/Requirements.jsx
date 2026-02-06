@@ -8,12 +8,12 @@ import { Thermometer, Boxes, SlidersHorizontal } from "lucide-react";
  * ✅ Adds "Budget-Friendly Commercial Freezers" BELOW the cards
  */
 
-const SECTION_TITLE = "Why Choose Antes Global for Ice Cube Machine?";
+const SECTION_TITLE = "Why Choose Antes for Ice Cube Machine?";
 
 const SECTION_DESC =
   "As a leading Ice Cube Machine Manufacturers in Kerala, India offers wide variety of ice cube machines to fulfill the various requirements of the customers, be it commercial or industrial. This is done with a view of ensuring we provide the highest quality machines that meet and or exceed the required performance in terms of durability.As we know every business is different and requires specific solutions, we provide specific services to match particular needs. Ice cube making machines have been designed to be efficient and dependable source of good quality ice as and when needed. Not only do we offer high quality products but also our company’s customer care services such as installation, maintenance, and technical assistance.";
 
-const FEATURES_TITLE = "Types of Ice Cube Machines Offered by Antes Global:";
+const FEATURES_TITLE = "Types of Ice Cube Machines Offered by Antes:";
 
 const FEATURES = [
   {
@@ -39,7 +39,7 @@ const BUDGET_IMAGE = "/bottle-chillers.jpg";
 // const BUDGET = {
 //   title: "Budget-Friendly Commercial Freezers",
 //   para1:
-//     "At Antes Global, we understand that quality cold storage services should not be a preserve of large enterprises. That is why we provide affordable commercial refrigeration installation while still providing top-notch quality and functionality. Our team of professionals will consult with you and determine your precise needs in order to provide you with the best proposals.",
+//     "At Antes, we understand that quality cold storage services should not be a preserve of large enterprises. That is why we provide affordable commercial refrigeration installation while still providing top-notch quality and functionality. Our team of professionals will consult with you and determine your precise needs in order to provide you with the best proposals.",
 //   para2:
 //     "Our solutions are designed to create a seamless and efficient shopping experience, from backend storage to front-end display. We offer both 1-to-1 display systems and multiple display systems connected to centralized refrigeration systems, ensuring optimal performance and energy efficiency.",
 // };

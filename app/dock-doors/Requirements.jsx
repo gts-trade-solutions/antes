@@ -8,7 +8,7 @@ import { Thermometer, Boxes, SlidersHorizontal } from "lucide-react";
  * ✅ Adds "Budget-Friendly Commercial Freezers" BELOW the cards
  */
 
-const SECTION_TITLE = "Why Choose Antes Global for Doors and Docking Solutions?";
+const SECTION_TITLE = "Why Choose Antes for Doors and Docking Solutions?";
 
 const SECTION_DESC =
   "Our Doors and Docking Solutions in India aims to give our clients solutions that will be best suited for them and their respective organizations. With the help of our highly skilled personnel, we are able to appreciate your needs and ensure that the Doors and Docking Solutions we offer compliments your business. Our products are produced using the best quality materials and superior manufacturing methods and they are meant to last. Our solutions aim at conserving energy as this will enable the clients to cut on their expenses as well as the impacts on the environment. Our doors and docker systems are highly reliable and will not fail in their operations thereby ensuring the efficient working of your cold storage facility.";
