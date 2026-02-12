@@ -29,12 +29,7 @@ const PRODUCTS = [
     img: "/walkin-cold-rooms.webp",
     href: "/walkin-cold-rooms",
   },
-  {
-    title: "Supermarket Display Chiller",
-    desc: "Freezers and Chillers",
-    img: "/supermarket-chiller-supplier.webp",
-    href: "/supermarket-display-chillers",
-  },
+  
   {
     title: "Ice Cube Machines",
     desc: "Wide range of Ice machines",
