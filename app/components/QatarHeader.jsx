@@ -147,7 +147,7 @@ export default function QatarHeader() {
                                 {/* CTA */}
                                 <Button
                                     className="hidden lg:inline-flex rounded-full px-5 bg-white text-[#061427] hover:bg-white/90"
-                                    onClick={() => go("/contact")}
+                                    onClick={() => go("/qatar-contact")}
                                 >
                                     Contact Us
                                 </Button>
@@ -202,7 +202,7 @@ export default function QatarHeader() {
 
                         <Button
                             className="w-full rounded-full bg-white text-[#061427]"
-                            onClick={() => go("/contact")}
+                            onClick={() => go("/qatar-contact")}
                         >
                             Contact Us
                         </Button>
