@@ -12,7 +12,7 @@ export default function Contact() {
     {
       country: "Qatar",
       badge: "Antes International WLL",
-      address: ["Office 03, 2F Block 55", "Barwa Commercial Avenue", "Doha, Qatar"],
+      address: ["C.R.NO:78049 , P.O.BOX:37794 , BUILDING 91 , ZONE 91 STREET 3083 , BIRKAT AL AWAMER , DOHA , QATAR"],
       email: "tisson@antesglobal.com",
       phones: ["+974 3000 6550"],
     },
@@ -20,9 +20,9 @@ export default function Contact() {
       country: "Oman",
       badge: "AL Arab Global Cooling Solution",
       address: [
-        "Block No.293, was Number 9307, Building No. 1/1012, West Misfat Bawshar, Muscut, Oman",
+        "CR NO.1426490 , UNIT NO.41 , BUILDING NO.698 , BLOCK NO . 164 , WAY-5007 , GHALA , MUSCAT - SULTANATE OF OMAN",
       ],
-      email: "sales.in@antesglobal.com",
+      email: "service.oman@antesglobal.com , accounts.oman@antesglobal.com",
       phones: ["+968 9173 7705"],
     },
   ];

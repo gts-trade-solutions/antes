@@ -218,7 +218,7 @@ const FAQ_DATA = [
       },
       {
         q: "How can I contact Antes (Qatar)?",
-        a: "Qatar: Antes International WLL, Office 03, 2F Block 55, Barwa Commercial Avenue, Doha, Qatar. Email: tisson@antesglobal.com. Contact: +974 3000 6550.",
+        a: "Qatar: Antes International WLL, C.R.NO:78049 , P.O.BOX:37794 , BUILDING 91 , ZONE 91 STREET 3083 , BIRKAT AL AWAMER , DOHA , QATAR. Email: tisson@antesglobal.com. Contact: +974 3000 6550.",
       },
       {
         q: "How can I contact Antes (Oman)?",

@@ -58,7 +58,7 @@ export default function QatarFooter() {
                     <MapPin className="h-5 w-5" />
                   </span>
                   <p className="whitespace-pre-line">
-                    {"Office 03, 2F Block 55 Barwa Commercial Avenue Doha, Qatar"}
+                    {"C.R.NO:78049 , P.O.BOX:37794 , BUILDING 91, ZONE 91 STREET 3083, BIRKAT AL AWAMER , DOHA , QATAR"}
                   </p>
                 </div>
               </div>
