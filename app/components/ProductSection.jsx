@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import Link from "next/link";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -8,7 +8,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-
 
 const PRODUCTS = [
   {
@@ -29,7 +28,6 @@ const PRODUCTS = [
     img: "/walkin-cold-rooms.webp",
     href: "/walkin-cold-rooms",
   },
-  
   {
     title: "Ice Cube Machines",
     desc: "Wide range of Ice machines",
@@ -57,6 +55,9 @@ const PRODUCTS = [
 ];
 
 export default function ProductsPaletteSection() {
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+
   return (
     <section className="relative bg-white py-10 sm:py-16">
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white via-slate-50 to-white" />
@@ -75,19 +76,23 @@ export default function ProductsPaletteSection() {
           </p>
         </div>
 
-        {/* Slider wrapper */}
+        {/* Slider */}
         <div className="relative mx-auto mt-10 max-w-6xl">
           {/* Nav buttons */}
           <button
+            ref={prevRef}
             className="products-prev absolute left-0 top-[150px] z-20 hidden h-10 w-10 -translate-x-5 items-center justify-center rounded-full border border-slate-200 bg-white shadow-sm transition hover:shadow-md md:flex"
             aria-label="Previous"
+            type="button"
           >
             <ChevronLeft className="h-5 w-5 text-slate-700" />
           </button>
 
           <button
+            ref={nextRef}
             className="products-next absolute right-0 top-[150px] z-20 hidden h-10 w-10 translate-x-5 items-center justify-center rounded-full border border-slate-200 bg-white shadow-sm transition hover:shadow-md md:flex"
             aria-label="Next"
+            type="button"
           >
             <ChevronRight className="h-5 w-5 text-slate-700" />
           </button>
@@ -96,14 +101,25 @@ export default function ProductsPaletteSection() {
             modules={[Autoplay, Navigation]}
             loop
             centeredSlides
-            slideToClickedSlide
+            // ❌ REMOVE this - it commonly breaks inner clicks
+            // slideToClickedSlide
             autoplay={{ delay: 2600, disableOnInteraction: false }}
             speed={700}
-            navigation={{
-              prevEl: ".products-prev",
-              nextEl: ".products-next",
-            }}
             spaceBetween={18}
+            // ✅ allow clicks inside slides
+            preventClicks={false}
+            preventClicksPropagation={false}
+            // ✅ don't block default click on touch devices
+            touchStartPreventDefault={false}
+            threshold={5} // small drag threshold
+            onBeforeInit={(swiper) => {
+              swiper.params.navigation.prevEl = prevRef.current;
+              swiper.params.navigation.nextEl = nextRef.current;
+            }}
+            navigation={{
+              prevEl: prevRef.current,
+              nextEl: nextRef.current,
+            }}
             breakpoints={{
               0: { slidesPerView: 1.1, centeredSlides: true, spaceBetween: 14 },
               480: { slidesPerView: 1.6, centeredSlides: true, spaceBetween: 16 },
@@ -129,19 +145,22 @@ export default function ProductsPaletteSection() {
   );
 }
 
-/* ---------------------------- */
-/* Item (NO image background card) */
-/* ---------------------------- */
 function ProductItem({ item }) {
+  const stopSwiper = (e) => {
+    // ✅ this is the key: stop Swiper from treating it as slide click/drag
+    e.preventDefault();
+    e.stopPropagation();
+  };
+
   return (
     <div className="group mx-auto flex max-w-[360px] flex-col items-center text-center">
-      {/* ✅ Image only (no card, no border, no bg) */}
       <div className="relative flex h-[230px] w-full items-center justify-center sm:h-[250px]">
         <img
           src={item.img}
           alt={item.title}
           loading="lazy"
-          className="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+          className="max-h-full max-w-full select-none object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+          draggable={false}
         />
       </div>
 
@@ -156,13 +175,17 @@ function ProductItem({ item }) {
       <Link
         href={item.href}
         className={[
-          "mt-5 inline-flex items-center justify-center gap-2",
+          "relative z-20 mt-5 inline-flex items-center justify-center gap-2",
           "rounded-md border border-[#002858]/25 bg-white px-6 py-2.5",
           "text-sm font-semibold text-[#1D4ED8]",
           "shadow-sm transition-all duration-300",
           "hover:-translate-y-0.5 hover:border-[#002858]/35 hover:shadow-md",
           "focus:outline-none focus:ring-2 focus:ring-[#30B0E0]/40",
         ].join(" ")}
+        // ✅ stop Swiper on both desktop + mobile
+        onClickCapture={(e) => e.stopPropagation()}
+        onMouseDownCapture={stopSwiper}
+        onTouchStartCapture={stopSwiper}
       >
         Read More <ArrowRight className="h-4 w-4" />
       </Link>
