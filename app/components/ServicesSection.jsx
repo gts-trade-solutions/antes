@@ -55,7 +55,7 @@ export default function ServiceSection() {
 
                   {/* Button */}
                   <div className="mt-6">
-                    <Link href="/banner-content">
+                    <Link href="/solutions-products">
                       <Button className="rounded-full bg-white text-slate-900 border border-black/10 px-6 hover:bg-slate-50">
                         More Info
                       </Button>
