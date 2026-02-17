@@ -214,43 +214,7 @@ export default function Company() {
       </section>
 
       {/* ABOUT US */}
-      <section className="relative py-8 sm:py-20 bg-white">
-        <div className={FLUID}>
-          <div className="text-center">
-            <div className="inline-flex items-center rounded-full border border-black/10 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-slate-700">
-              About Us
-            </div>
-
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-              About Antes
-            </h2>
-
-            <div className="mx-auto mt-4 h-px max-w-2xl bg-black/10" />
-          </div>
-
-          <div className="mt-4 rounded-3xl border border-black/10 bg-white p-7 shadow-sm sm:p-9">
-            <p className="text-base leading-relaxed text-slate-600 sm:text-lg">
-              Antes is a fast-growing commercial refrigeration and cold chain solution provider, specializing in
-              delivering integrated, end-to-end cold chain solutions tailored to the specific operational requirements
-              of our clients. We support a diverse range of industries including food processing, cold storage and
-              packaging, retail and quick-service restaurants, dairy, seafood exports, large multipurpose cold
-              warehousing, hospitality, pharmaceuticals, process line cooling, and cold chain logistics.
-            </p>
-
-            <p className="mt-5 text-base leading-relaxed text-slate-600 sm:text-lg">
-              With active operations across India, Oman, and Qatar, Antes delivers region-specific cold chain
-              solutions, backed by a deep understanding of local climatic conditions, regulatory compliance, and
-              industry-specific performance standards.
-            </p>
-
-            <p className="mt-5 text-base leading-relaxed text-slate-600 sm:text-lg">
-              Our core strength lies in our in-house team of skilled and experienced professionals, operating under our
-              proprietary “5KS” – Five Key Cross-Functional Specializations, enabling us to deliver seamless, reliable,
-              and performance-driven cold chain solutions from concept to commissioning and beyond.
-            </p>
-          </div>
-        </div>
-      </section>
+     
 
       {/* VISION + MISSION */}
     <section className="relative py-10 sm:py-20">
